@@ -39,4 +39,4 @@ git merge <branch name>
 
 git branch -d <branch name>
 
-done.
+done….
