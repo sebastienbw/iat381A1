@@ -26,4 +26,17 @@ git push origin gh-pages
 
 git checkout master
 
+//create branch
+git checkout -b <branch name> master
+
+//edit files
+git add <file>
+
+//merge files
+git checkout master
+
+git merge <branch name>
+
+git branch -d <branch name>
+
 done.
