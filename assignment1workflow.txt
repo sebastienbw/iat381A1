@@ -1,0 +1,29 @@
+Assignment 1 Workflow
+
+//change directory to current folder
+
+git checkout master //need to be in master to pull
+
+git pull
+
+//make changes
+
+git add -A
+
+git status //check that files were staged
+
+git commit -m "message here"
+
+git push -u origin master
+
+//check github for new commit
+
+git checkout gh-pages
+
+git rebase master
+
+git push origin gh-pages
+
+git checkout master
+
+done.
