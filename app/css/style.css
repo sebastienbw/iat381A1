@@ -4,10 +4,17 @@
 .placeholder {
   max-height: 240;
   max-width: 320;
+  margin: 20px 20px 10px 0
   color: white;
   background-color: black;
   display: block;
-  padding: 6px;
+  padding: 10px;
+  border: 2px;
+  border: solid red;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  text-align: center;
 }
 
 .resting {
@@ -29,3 +36,4 @@
 .nextQuestionHidden {
   visibility: hidden;
 }
+
