@@ -29,3 +29,14 @@
 .nextQuestionHidden {
   visibility: hidden;
 }
+
+.answer-btn {
+  padding: 2em;
+  background-color: rgb(50,100,200);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.answer-btn:hover {
+  background-color: rgb(100,150,250);
+}

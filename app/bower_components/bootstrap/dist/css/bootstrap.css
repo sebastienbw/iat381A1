@@ -6564,35 +6564,3 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-
-/*--------CUSTOM CSS----------*/
-/*-------By Sage & Seb--------*/
-
-.placeholder {
-  max-height: 240;
-  max-width: 320;
-  color: white;
-  background-color: black;
-  display: block;
-  padding: 6px;
-}
-
-.resting {
-  background-color: white;
-}
-
-.correct {
-  background-color: green;
-}
-
-.wrong {
-  background-color: red;
-}
-
-.nextQuestionVisible {
-  visibility: visible;
-}
-
-.nextQuestionHidden {
-  visibility: hidden;
-}
