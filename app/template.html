@@ -1,0 +1,44 @@
+<div class="quiz-area" ng-show="inProgress">
+	<div ng-show="!quizOver">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 id="question">{{question}}</h2>
+			</div>
+		</div>
+		<div class ="row">
+			<div calss="col-md-12">
+				<div class="placeholder">
+					placeholder for image
+				</div>
+			</div>
+		</div>
+		<div class="{{bgClass}}">
+			test
+		</div>
+		
+		<ul id="options">
+			<li ng-repeat="option in options">
+				<label>
+					<button name="answer" value="{{option}}" ng-click="checkAnswer(option)">{{option}}</button>
+				</label>
+			</li>
+		</ul>
+
+		<button class="{{nextQuestion}}" ng-click="swapQuestion()">Next Question!</button>
+
+	</div>
+
+	<div ng-show="quizOver">
+		<h2>Quiz is over</h2>
+		<button ng-click="reset()">Play again</button>
+	</div>
+
+	<div id="score">
+		Score: {{score}}
+	</div>
+</div>
+
+<div class="intro" ng-show="!inProgress">
+	<p>Welcome to the QuizApp</p>
+	<button id="startQuiz" ng-click="start()">Start the Quiz</button>
+</div>
