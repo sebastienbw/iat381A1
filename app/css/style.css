@@ -9,10 +9,12 @@
   background-color: black;
   display: block;
   padding: 10px;
-  border: 2px solid purple
+  border: 2px;
+  border: solid red;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  text-align: center;
 }
 
 .resting {
