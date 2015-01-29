@@ -10,7 +10,9 @@ app.directive('quiz', function(quizFactory) {
 				scope.id = 0;
 				scope.quizOver = false;
 				scope.inProgress = true;
+				scope.answered = false;
 				scope.getQuestion();
+				scope.resetButtons();
 				scope.bgClass = "resting";
 				scope.nextQuestion = "nextQuestionHidden";
 			};
@@ -18,6 +20,13 @@ app.directive('quiz', function(quizFactory) {
 			scope.reset = function() {
 				scope.inProgress = false;
 				scope.score = 0;
+			}
+
+			scope.resetButtons = function() {
+				scope.btn = [3];
+				for (var i = 0; i < scope.options.length; i++) {
+					scope.btn[i] = null;
+				}
 			}
 
 			scope.getQuestion = function() {
@@ -35,15 +44,19 @@ app.directive('quiz', function(quizFactory) {
 			};
 
 			scope.checkAnswer = function(clicked) {
-				var correctAns = scope.options[scope.answer];
-				if (clicked == correctAns) {
-					console.log("Correct!");
-					scope.result = true;
-				} else {
-					console.log("Wrong!");
-					scope.result = false;
+				if (!scope.answered) {
+					var correctAns = scope.options[scope.answer];
+					if (clicked == correctAns) {
+						console.log("Correct!");
+						scope.result = true;
+						scope.score++
+					} else {
+						console.log("Wrong!");
+						scope.result = false;
+					}
+					scope.givenAnswer();
+					scope.answered = true;
 				}
-				scope.givenAnswer();
 			}
 
 			scope.givenAnswer = function() {
@@ -52,13 +65,29 @@ app.directive('quiz', function(quizFactory) {
 				} else {
 					scope.bgClass = "wrong";
 				}
+				scope.answerAnimation();
 				scope.nextQuestion = "nextQuestionVisible";
+			}
+
+			scope.answerAnimation = function() {
+				console.log(scope.options.length);
+				for (var i = 0; i < scope.options.length; i++) {
+					console.log(scope.options.length);
+					if (i == scope.answer) {
+						scope.btn[i] = "correct";
+						console.log("yup");
+					} else {
+						scope.btn[i] = "wrong";
+					}
+				}
 			}
 
 			scope.swapQuestion = function() {
 				console.log("yup");
 				scope.id++;
 				scope.getQuestion();
+				scope.answered = false;
+				scope.resetButtons();
 			}
 
 			scope.reset();
@@ -71,17 +100,17 @@ app.factory('quizFactory', function() {
 		{
 			question: "Question 1",
 			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 2
+			answer: 1
 		},
 		{
 			question: "Question 2",
 			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 2
+			answer: 3
 		},
 		{
 			question: "Question 3",
 			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 2
+			answer: 0
 		},
 		{
 			question: "Question 4",
@@ -91,7 +120,7 @@ app.factory('quizFactory', function() {
 		{	
 			question: "Question 5",
 			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 2
+			answer: 1
 		}
 	];
 

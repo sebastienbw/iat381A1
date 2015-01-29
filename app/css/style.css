@@ -25,11 +25,11 @@
 }
 
 .correct {
-  background-color: green;
+  background-color: #6EE05D;
 }
 
 .wrong {
-  background-color: red;
+  background-color: #E05D63;
 }
 
 .nextQuestionVisible {
@@ -49,4 +49,19 @@
 
 .answer-btn:hover {
   background-color: rgb(100,150,250);
+}
+
+.quizBody {
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  text-align: center;
+  max-width: 480px;
+}
+
+.answer-btn.correct {
+  background-color: green;
+}
+
+.answer-btn.wrong {
+  background-color: red;
 }
