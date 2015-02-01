@@ -37,6 +37,8 @@ app.directive('quiz', function(quizFactory) {
 					scope.question = q.question;
 					scope.options = q.options;
 					scope.answer = q.answer;
+					scope.image = q.image;
+					scope.solution = q.solution;
 					//scope.answerMode = true;
 				} else {
 					scope.quizOver = true;
@@ -45,6 +47,7 @@ app.directive('quiz', function(quizFactory) {
 
 			scope.checkAnswer = function(clicked) {
 				if (!scope.answered) {
+					scope.image = scope.solution;
 					var correctAns = scope.options[scope.answer];
 					if (clicked == correctAns) {
 						console.log("Correct!");
@@ -98,29 +101,39 @@ app.directive('quiz', function(quizFactory) {
 app.factory('quizFactory', function() {
 	var questions = [
 		{
-			question: "Question 1",
-			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 1
+			question: "Does he make the jump?",
+			options: ["Nailed It!", "Not Even Close", "Gives Up", "CATastrophe!"],
+			answer: 1,
+			image: "img/question1.gif",
+			solution: "img/solution1.gif"
 		},
 		{
 			question: "Question 2",
 			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 3
+			answer: 3,
+			image: "img/testgif1.gif",
+			solution: "img/kitten.jpg"
 		},
 		{
 			question: "Question 3",
 			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 0
+			answer: 0,
+			image: "img/testgif1.gif",
+			solution: "img/kitten.jpg"
 		},
 		{
 			question: "Question 4",
 			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 2
+			answer: 2,
+			image: "img/testgif1.gif",
+			solution: "img/kitten.jpg"
 		},
 		{	
 			question: "Question 5",
 			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 1
+			answer: 1,
+			image: "img/testgif1.gif",
+			solution: "img/kitten.jpg"
 		}
 	];
 
