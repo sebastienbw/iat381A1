@@ -11,6 +11,7 @@ app.directive('quiz', function(quizFactory) {
 				scope.quizOver = false;
 				scope.inProgress = true;
 				scope.answered = false;
+				scope.imageBorder = "image-border-idle";
 				scope.getQuestion();
 				scope.resetButtons();
 				scope.bgClass = "resting";
@@ -33,6 +34,7 @@ app.directive('quiz', function(quizFactory) {
 				var q = quizFactory.getQuestion(scope.id);
 				scope.bgClass = "resting";
 				scope.nextQuestion = "nextQuestionHidden";
+				scope.imageBorder = "image-border-idle";
 				if(q) {
 					scope.question = q.question;
 					scope.options = q.options;
@@ -65,8 +67,10 @@ app.directive('quiz', function(quizFactory) {
 			scope.givenAnswer = function() {
 				if (scope.result == true) {
 					scope.bgClass = "correct";
+					scope.imageBorder = "image-border-correct";
 				} else {
 					scope.bgClass = "wrong";
+					scope.imageBorder = "image-border-wrong";
 				}
 				scope.answerAnimation();
 				scope.nextQuestion = "nextQuestionVisible";
@@ -101,7 +105,7 @@ app.directive('quiz', function(quizFactory) {
 app.factory('quizFactory', function() {
 	var questions = [
 		{
-			question: "Does he make the jump?",
+			question: "Does cat make the jump?",
 			options: ["Nailed It!", "Not Even Close", "Gives Up", "CATastrophe!"],
 			answer: 1,
 			image: "img/question1.gif",
