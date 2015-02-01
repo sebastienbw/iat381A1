@@ -2,26 +2,16 @@
 /*-------By Sage & Seb--------*/
 
 .placeholder {
-/*  max-height: 240;
-  max-width: 320;
-  margin: 20px 20px 10px 0
-  color: white;
-  background-color: black;
-  display: block;
-  padding: 10px;
-  border: 2px;
-  border: solid red;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  text-align: center;*/
-
   max-width: 100%;
   height: auto;
 }
 
+#options {
+  font-size: 1.25em;
+}
+
 .resting {
-  background-color: white;
+  background-color: #E0E0E0;
 }
 
 .correct {
@@ -34,6 +24,15 @@
 
 .nextQuestionVisible {
   visibility: visible;
+  font-size: 2em;
+  font-weight: bold;
+  /*background-color: yellow;*/
+  border-radius:0.5em;
+  display: block;
+}
+
+.nextQuestionVisible:hover {
+  color:white;
 }
 
 .nextQuestionHidden {
@@ -41,10 +40,16 @@
 }
 
 .answer-btn {
-  padding: 2em;
-  background-color: rgb(50,100,200);
+  padding: 1em;
+  margin: 0.25em -0.75em;
+  background-color: rgb(75,125,225);
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
+  border-radius: 0.5em;
+  border-style:solid;
+  border-color: rgb(25,75,175);
+  color: white;
+  font-weight: bold;
 }
 
 .answer-btn:hover {
@@ -60,8 +65,65 @@
 
 .answer-btn.correct {
   background-color: green;
+  border-color: green;
 }
 
 .answer-btn.wrong {
   background-color: red;
+  border-color: red;
+}
+
+.image-border-idle {
+  border: 4px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+.image-border-correct {
+  border: 4px;
+  border-style: solid;
+  border-color: #00FF00;
+}
+
+.image-border-wrong {
+  border: 4px;
+  border-style: solid;
+  border-color: #FF0000;
+}
+
+.header {
+  background-color: #000000;
+  opacity: 0.5;
+  height: 5.5em;
+}
+
+.header-pad {
+  padding: 0.6em 0em 0em 0em;
+}
+
+.header-text {
+  opacity: 1;
+  color: white;
+}
+
+.footer {
+  /*display: block;*/
+/*  height: 9em;*/
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5em;
 }
