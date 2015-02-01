@@ -112,11 +112,11 @@ app.factory('quizFactory', function() {
 			solution: "img/solution1.gif"
 		},
 		{
-			question: "Question 2",
-			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-			answer: 3,
-			image: "img/testgif1.gif",
-			solution: "img/kitten.jpg"
+			question: "Does the cat fall in?",
+			options: ["Definitly", "Err kind of", "Nope", "CATastrophe"],
+			answer: 2,
+			image: "img/question2.gif",
+			solution: "img/solution2.gif"
 		},
 		{
 			question: "Question 3",
