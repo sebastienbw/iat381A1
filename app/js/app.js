@@ -48,6 +48,12 @@ app.directive('quiz', function(quizFactory) {
 			};
 
 			scope.checkAnswer = function(clicked) {
+				for (var i = 0; i < scope.options.length; i++) {
+					if (clicked == scope.options[i]) {
+						console.log("yeha!");
+						scope.btn[i] = scope.btn[i] + " selected"
+					}
+				}
 				if (!scope.answered) {
 					scope.image = scope.solution;
 					var correctAns = scope.options[scope.answer];
@@ -65,6 +71,7 @@ app.directive('quiz', function(quizFactory) {
 			}
 
 			scope.givenAnswer = function() {
+
 				if (scope.result == true) {
 					scope.bgClass = "correct";
 					scope.imageBorder = "image-border-correct";
@@ -81,10 +88,10 @@ app.directive('quiz', function(quizFactory) {
 				for (var i = 0; i < scope.options.length; i++) {
 					console.log(scope.options.length);
 					if (i == scope.answer) {
-						scope.btn[i] = "correct";
+						scope.btn[i] = scope.btn[i] + " correct";
 						console.log("yup");
 					} else {
-						scope.btn[i] = "wrong";
+						scope.btn[i] = scope.btn[i] + " wrong";
 					}
 				}
 			}
@@ -112,11 +119,11 @@ app.factory('quizFactory', function() {
 			solution: "img/solution1.gif"
 		},
 		{
-			question: "Does the cat fall in?",
-			options: ["Definitly", "Err kind of", "Nope", "CATastrophe"],
-			answer: 2,
-			image: "img/question2.gif",
-			solution: "img/solution2.gif"
+			question: "Question 2",
+			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
+			answer: 3,
+			image: "img/testgif1.gif",
+			solution: "img/kitten.jpg"
 		},
 		{
 			question: "Question 3",

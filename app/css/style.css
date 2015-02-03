@@ -1,13 +1,36 @@
 /*--------CUSTOM CSS----------*/
 /*-------By Sage & Seb--------*/
 
+.quizBody {
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  text-align: center;
+  height: 100%;
+}
+
+.container-fluid {
+  height: 100%;
+  padding: 0;
+}
+
 .placeholder {
   max-width: 100%;
   height: auto;
+  margin-top: 1em;
 }
 
 #options {
   font-size: 1.25em;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.answerRow {
+  padding: 1em;
+}
+
+.question {
+  margin: 0.25em;
 }
 
 .resting {
@@ -19,7 +42,7 @@
 }
 
 .wrong {
-  background-color: #E05D63;
+  background-color: #E82E40;
 }
 
 .nextQuestionVisible {
@@ -40,75 +63,69 @@
 }
 
 .answer-btn {
-  padding: 1em;
+  padding: 0.5em;
   margin: 0.25em -0.75em;
-  background-color: rgb(75,125,225);
+  background-color: rgba(0,0,0,0.3);
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
   border-radius: 0.5em;
   border-style:solid;
-  border-color: rgb(25,75,175);
+  border-color: rgba(0,0,0,0);
   color: white;
   font-weight: bold;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .answer-btn:hover {
   background-color: rgb(100,150,250);
 }
 
-.quizBody {
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-  text-align: center;
-  max-width: 480px;
-}
+
 
 .answer-btn.correct {
   background-color: green;
-  border-color: green;
 }
 
 .answer-btn.wrong {
-  background-color: red;
-  border-color: red;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.answer-btn.selected {
+  border-color: rgba(255,255,255,0.9);
 }
 
 .image-border-idle {
   border: 4px;
   border-style: solid;
-  border-color: #000000;
+  border-color: rgba(0,0,0,0.75);
 }
 
 .image-border-correct {
   border: 4px;
   border-style: solid;
-  border-color: #00FF00;
+  border-color: #00AA00;
 }
 
 .image-border-wrong {
   border: 4px;
   border-style: solid;
-  border-color: #FF0000;
+  border-color: #AA0000;
 }
 
 .header {
-  background-color: #000000;
-  opacity: 0.5;
+  background-color: rgba(0,0,0,0.5);
   height: 5.5em;
+  color: white;
 }
 
 .header-pad {
   padding: 0.6em 0em 0em 0em;
 }
 
-.header-text {
-  opacity: 1;
-  color: white;
-}
-
 .footer {
-  /*display: block;*/
-/*  height: 9em;*/
+  padding: 0.25em 0em 2em 0em;
 }
 
 body {
