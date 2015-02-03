@@ -1,5 +1,15 @@
 var app = angular.module('catApp', []);
 
+//preload images
+var questionImgs = [];
+var answerImgs = [];
+for (var i = 0; i < 5; i++) {
+	questionImgs[i] = new Image();
+	answerImgs[i] = new Image();
+	questionImgs[i].src = "img/q" + (i + 1) + ".gif";
+	answerImgs[i].src = "img/a" + (i + 1) + ".gif";
+}
+
 app.directive('quiz', function(quizFactory) {
 	return {
 		restrict: 'AE',
@@ -115,37 +125,37 @@ app.factory('quizFactory', function() {
 			question: "Does Cat make the jump?",
 			options: ["Nailed It!", "Not Even Close", "Gives Up", "CATastrophe!"],
 			answer: 1,
-			image: "img/question1.gif",
-			solution: "img/solution1.gif"
+			image: questionImgs[0].src,
+			solution: answerImgs[0].src 
 		},
 		{
 			question: "What does Cat do next?",
 			options: ["Attacks Human's Face", "Jumps Over Human", "Trips Human", "CATastrophe!"],
 			answer: 3,
-			image: "img/q3.gif",
-			solution: "img/a3.gif"
+			image: questionImgs[1].src,
+			solution: answerImgs[1].src  
 		},
 		{
 			question: "Does Cat stick the landing?",
 			options: ["No Problem!", "Falls Off Ledge", "Jumps Too Short", "CATastrophe!"],
 			answer: 0,
-			image: "img/q2.gif",
-			solution: "img/a2.gif"
+			image: questionImgs[2].src,
+			solution: answerImgs[2].src 
 			
 		},
 		{
 			question: "How does Cat handle screen doors?",
 			options: ["Runs Into It", "Rips It To Shreds", "Cat is also Spider-Man", "CATastrophe!"],
 			answer: 2,
-			image: "img/q4.gif",
-			solution: "img/a4.gif"
+			image: questionImgs[3].src,
+			solution: answerImgs[3].src 
 		},
 		{	
 			question: "How does Cat handle the cup?",
 			options: ["Cup Falls Off", "Tries to Back Out", "Runs Into Couch", "CATastrophe!"],
 			answer: 1,
-			image: "img/q5.gif",
-			solution: "img/a5.gif"
+			image: questionImgs[4].src,
+			solution: answerImgs[4].src 
 		}
 	];
 
