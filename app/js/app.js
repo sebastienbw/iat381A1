@@ -112,39 +112,40 @@ app.directive('quiz', function(quizFactory) {
 app.factory('quizFactory', function() {
 	var questions = [
 		{
-			question: "Does cat make the jump?",
+			question: "Does Cat make the jump?",
 			options: ["Nailed It!", "Not Even Close", "Gives Up", "CATastrophe!"],
 			answer: 1,
 			image: "img/question1.gif",
 			solution: "img/solution1.gif"
 		},
 		{
-			question: "Question 2",
-			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
+			question: "What does Cat do next?",
+			options: ["Attacks Human's Face", "Jumps Over Human", "Trips Human", "CATastrophe!"],
 			answer: 3,
-			image: "img/testgif1.gif",
-			solution: "img/kitten.jpg"
+			image: "img/q3.gif",
+			solution: "img/a3.gif"
 		},
 		{
-			question: "Question 3",
-			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
+			question: "Does Cat stick the landing?",
+			options: ["No Problem!", "Falls Off Ledge", "Jumps Too Short", "CATastrophe!"],
 			answer: 0,
-			image: "img/testgif1.gif",
-			solution: "img/kitten.jpg"
+			image: "img/q2.gif",
+			solution: "img/a2.gif"
+			
 		},
 		{
-			question: "Question 4",
-			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
+			question: "How does Cat handle screen doors?",
+			options: ["Runs Into It", "Rips It To Shreds", "Cat is also Spider-Man", "CATastrophe!"],
 			answer: 2,
-			image: "img/testgif1.gif",
-			solution: "img/kitten.jpg"
+			image: "img/q4.gif",
+			solution: "img/a4.gif"
 		},
 		{	
-			question: "Question 5",
-			options: ["Answer1", "Answer2", "Answer3", "Answer4"],
+			question: "How does Cat handle the cup?",
+			options: ["Cup Falls Off", "Tries to Back Out", "Runs Into Couch", "CATastrophe!"],
 			answer: 1,
-			image: "img/testgif1.gif",
-			solution: "img/kitten.jpg"
+			image: "img/q5.gif",
+			solution: "img/a5.gif"
 		}
 	];
 

@@ -4,15 +4,26 @@
 
 			<div class="row-fluid">
 				<div class="header">
-					<div class="col-sm-3 header-pad">
-						<h3 id="question">Q{{id + 1}} of 5</h3>
+					<div class="full">
+						<div class="col-xs-3 header-pad">
+							<h3 id="question">Q{{id + 1}} of 5</h3>
+						</div>
+						<div class="col-xs-6 tester">
+							<h1>Cat App</h1>
+						</div>
+						<div class="col-xs-3 header-pad">
+							<h3 id="score">Score: {{score}}</h3>
+						</div>
 					</div>
-					<div class="col-sm-6">
-						<h1>Cat App</h1>
+					<div class="shrunk">
+						<div class="col-xs-6 header-pad">
+							<h3 id="question">Q{{id + 1}} of 5</h3>
+						</div>
+						<div class="col-xs-6 header-pad">
+							<h3 id="score">Score: {{score}}</h3>
+						</div>
 					</div>
-					<div class="col-sm-3 header-pad">
-						<h3 id="score">Score: {{score}}</h3>
-					</div>
+					
 		 		</div>
 			</div>
 
@@ -31,24 +42,24 @@
 			<div class ="row-fluid">
 				<div id="options">
 					<div class ="row-fluid">
-						<div class="col-md-6">
+						<div class="col-sm-6">
 							<div class="answer-btn {{btn[0]}}" name="answer" value="{{options[0]}}" ng-click="checkAnswer(options[0])">
 								{{options[0]}}
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-sm-6">
 							<div class="answer-btn {{btn[1]}}" name="answer" value="{{options[1]}}" ng-click="checkAnswer(options[1])">
 								{{options[1]}}
 							</div>
 						</div>
 					</div>
 					<div class ="row-fluid">
-						<div class="col-md-6">
+						<div class="col-sm-6">
 							<div class="answer-btn {{btn[2]}}" name="answer" value="{{options[2]}}" ng-click="checkAnswer(options[2])">
 								{{options[2]}}
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-sm-6">
 							<div class="answer-btn {{btn[3]}}" name="answer" value="{{options[3]}}" ng-click="checkAnswer(options[3])">
 								{{options[3]}}
 							</div>
@@ -58,7 +69,7 @@
 			</div>
 
 			<div class ="row-fluid">
-				<div class="col-md-12 footer">
+				<div class="col-xs-12 footer">
 					<h2 class="{{nextQuestion}}" ng-click="swapQuestion()">Next Question >>></h2>
 				</div>
 			</div>

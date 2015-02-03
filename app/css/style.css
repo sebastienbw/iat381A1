@@ -144,3 +144,14 @@ h2 {
 h3 {
   font-size: 1.5em;
 }
+
+@media screen and (min-width: 480px) {
+    .shrunk {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .full {
+        display: none !important;
+    }
+}
