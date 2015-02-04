@@ -52,6 +52,7 @@
   /*background-color: yellow;*/
   border-radius:0.5em;
   display: block;
+  color: white;
 }
 
 .nextQuestionVisible:hover {
