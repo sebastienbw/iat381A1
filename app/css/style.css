@@ -50,6 +50,10 @@
   background-color: #E82E40;
 }
 
+.align-left {
+  margin-left: 0em;
+}
+
 .nextQuestionVisible {
   visibility: visible;
   font-size: 2em;
@@ -169,9 +173,7 @@
 }
 
 .restart-btn {
-  background-color: rgba(255,255,255,0.5);
-  border-radius: 1em;
-  width: auto;
+  
 }
 
 body {
