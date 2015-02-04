@@ -47,6 +47,7 @@
 
 .nextQuestionVisible {
   visibility: visible;
+  position: relative;
   font-size: 2em;
   font-weight: bold;
   border-radius:0.5em;
