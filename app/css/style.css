@@ -53,6 +53,11 @@
   border-radius:0.5em;
   display: block;
   color: white;
+  height: 2em;
+  padding: 0em;
+  background-color: rgba(0,0,0,0.7);
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
 }
 
 .nextQuestionVisible:hover {
@@ -61,6 +66,11 @@
 
 .nextQuestionHidden {
   visibility: hidden;
+  height: 0em;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+
+
 }
 
 .answer-btn {
