@@ -53,9 +53,9 @@
   border-radius:0.5em;
   display: block;
   color: white;
-/*  height: 2em;*/
+  height: 2em;
   padding: 0em;
- /* background-color: rgba(0,0,0,0.7);*/
+  background-color: rgba(0,0,0,0.7);
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
@@ -75,7 +75,7 @@
 /*test underline*/
 .cmn-t-underline {
   position: relative;
-  color: #ff3296;
+  color: white;
 }
 .cmn-t-underline:after {
   display: block;
@@ -94,10 +94,6 @@
 .cmn-t-underline:hover:after {
   width: 100%;
 }
-
-
-
-
 
 
 .answer-btn {
