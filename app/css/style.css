@@ -29,8 +29,13 @@
   padding: 1em;
 }
 
-.question {
-  margin: 0.25em;
+.quizStatus {
+  font-weight: bold;
+  margin: 0em;
+}
+
+.quizScore {
+  margin: 0em;
 }
 
 .resting {
@@ -125,18 +130,28 @@
   border-color: #AA0000;
 }
 
+.middle-text {
+  margin: 0.8em 0em;
+}
+
 .header {
   background-color: rgba(0,0,0,0.5);
-  height: 5.5em;
+  height: 4.3em;
   color: white;
 }
 
 .header-pad {
-  padding: 0.6em 0em 0em 0em;
+  padding: 0.5em 0em 0em 0em;
 }
 
 .footer {
   padding: 0.25em 0em 2em 0em;
+}
+
+.restart-btn {
+  border-color: white;
+  border-style: solid;
+  border-radius: 1em;
 }
 
 body {
@@ -146,6 +161,7 @@ body {
 h1 {
   
   font-weight: bold;
+  margin: 0.25em;
 }
 
 h2 {

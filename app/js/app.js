@@ -58,12 +58,6 @@ app.directive('quiz', function(quizFactory) {
 			};
 
 			scope.checkAnswer = function(clicked) {
-				for (var i = 0; i < scope.options.length; i++) {
-					if (clicked == scope.options[i]) {
-						console.log("yeha!");
-						scope.btn[i] = scope.btn[i] + " selected"
-					}
-				}
 				if (!scope.answered) {
 					scope.image = scope.solution;
 					var correctAns = scope.options[scope.answer];
@@ -77,6 +71,12 @@ app.directive('quiz', function(quizFactory) {
 					}
 					scope.givenAnswer();
 					scope.answered = true;
+					for (var i = 0; i < scope.options.length; i++) {
+						if (clicked == scope.options[i]) {
+							console.log("yeha!");
+							scope.btn[i] = scope.btn[i] + " selected"
+						}
+					}
 				}
 			}
 
