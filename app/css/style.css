@@ -54,7 +54,7 @@
   display: block;
   color: white;
   height: 2em;
-  padding: 0em;
+  padding: 1em;
   background-color: rgba(0,0,0,0.7);
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
@@ -84,12 +84,12 @@
   bottom: -10px;
   width: 0;
   height: 10px;
-  background-color: #98004a;
+  background-color: white;
   content: "";
   transition: width 0.2s;
 }
 .cmn-t-underline:hover {
-  color: #98004a;
+  color: white;
 }
 .cmn-t-underline:hover:after {
   width: 100%;
