@@ -19,8 +19,6 @@ app.controller(
             $scope.imageLocations.push("img/a" + (i + 1) + ".gif");
         };
 
-        console.log($scope.imageLocations)
-
         // Preload the images; then, update display when returned.
         preloader.preloadImages( $scope.imageLocations ).then(
             function handleResolve( imageLocations ) {

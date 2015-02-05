@@ -31,8 +31,8 @@ for (var i = 0; i < 5; i++) {
 
 var questions = [];
 var answers = [];
-// preloadImages(questionImgs, questions, questionsLoaded);
-// preloadImages(answerImgs, answers, answersLoaded);
+preloadImages(questionImgs, questions, questionsLoaded);
+preloadImages(answerImgs, answers, answersLoaded);
 
 
 function questionsLoaded() {
