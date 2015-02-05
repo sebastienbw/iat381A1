@@ -94,6 +94,8 @@
 .cmn-t-underline {
   position: relative;
   color: white;
+  display: inline-block;
+  width: 7.5em;
 }
 .cmn-t-underline:after {
   display: block;
@@ -186,7 +188,7 @@
 }
 
 .catlogo{
-  margin: 0.5em;
+  margin: 0.7em;
 }
 
 

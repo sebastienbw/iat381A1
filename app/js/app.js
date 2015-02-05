@@ -1,22 +1,70 @@
 var app = angular.module('catApp', []);
 
+function preloadImages(srcs, imgs, callback) {
+    var img;
+    var remaining = srcs.length;
+    for (var i = 0; i < srcs.length; i++) {
+        img = new Image();
+        img.onload = function() {
+            --remaining;
+            if (remaining <= 0) {
+                callback();
+            }
+        };
+        img.src = srcs[i];
+        imgs.push(img);
+    }
+}
+
 //preload images
-var questionImgs = [];
-var answerImgs = [];
+var questionImgs = new Array(5);
+var answerImgs = new Array(5);
+var allImages = false;
+
 for (var i = 0; i < 5; i++) {
 	questionImgs[i] = new Image();
 	answerImgs[i] = new Image();
-	questionImgs[i].src = "img/q" + (i + 1) + ".gif";
-	answerImgs[i].src = "img/a" + (i + 1) + ".gif";
+	questionImgs[i] = "img/q" + (i + 1) + ".gif";
+	answerImgs[i] = "img/a" + (i + 1) + ".gif";
+
+};
+
+var questions = [];
+var answers = [];
+// preloadImages(questionImgs, questions, questionsLoaded);
+// preloadImages(answerImgs, answers, answersLoaded);
+
+
+function questionsLoaded() {
+	console.log("questions loaded");
+	console.log(questionImgs);
+	allImages = true;
+}
+
+function answersLoaded() {
+	console.log("answers loaded");
 }
 
 app.directive('quiz', function(quizFactory) {
+	if (allImages) {
+				console.log("hurrah");
+	}
+			console.log(allImages);
 	return {
 		restrict: 'AE',
 		scope: {},
 		templateUrl: 'template.html',
 		link: function(scope, elem, attrs) {
+
+			
+
+			scope.$watch(allImages, function() {
+			    console.log("true now!");
+			    console.log(allImages);
+			});
+
 			scope.start = function() {
+				console.log("start");
 				scope.id = 0;
 				scope.quizOver = false;
 				scope.inProgress = true;
@@ -125,37 +173,37 @@ app.factory('quizFactory', function() {
 			question: "Does Cat make the jump?",
 			options: ["Nailed It!", "Not Even Close", "Gives Up", "CATastrophe!"],
 			answer: 1,
-			image: questionImgs[0].src,
-			solution: answerImgs[0].src 
+			image: questionImgs[0],
+			solution: answerImgs[0] 
 		},
 		{
 			question: "What does Cat do next?",
 			options: ["Attacks Human's Face", "Jumps Over Human", "Trips Human", "CATastrophe!"],
 			answer: 3,
-			image: questionImgs[1].src,
-			solution: answerImgs[1].src  
+			image: questionImgs[1],
+			solution: answerImgs[1]  
 		},
 		{
 			question: "Does Cat stick the landing?",
 			options: ["No Problem!", "Falls Off Ledge", "Jumps Too Short", "CATastrophe!"],
 			answer: 0,
-			image: questionImgs[2].src,
-			solution: answerImgs[2].src 
+			image: questionImgs[2],
+			solution: answerImgs[2] 
 			
 		},
 		{
 			question: "How does Cat handle screen doors?",
 			options: ["Runs Into It", "Rips It To Shreds", "Cat is also Spider-Man", "CATastrophe!"],
 			answer: 2,
-			image: questionImgs[3].src,
-			solution: answerImgs[3].src 
+			image: questionImgs[3],
+			solution: answerImgs[3] 
 		},
 		{	
 			question: "How does Cat handle the cup?",
 			options: ["Cup Falls Off", "Tries to Back Out", "Runs Into Couch", "CATastrophe!"],
 			answer: 1,
-			image: questionImgs[4].src,
-			solution: answerImgs[4].src 
+			image: questionImgs[4],
+			solution: answerImgs[4] 
 		}
 	];
 
