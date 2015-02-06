@@ -1,25 +1,7 @@
 var app = angular.module('catApp', []);
 
-function preloadImages(srcs, imgs, callback) {
-    var img;
-    var remaining = srcs.length;
-    for (var i = 0; i < srcs.length; i++) {
-        img = new Image();
-        img.onload = function() {
-            --remaining;
-            if (remaining <= 0) {
-                callback();
-            }
-        };
-        img.src = srcs[i];
-        imgs.push(img);
-    }
-}
-
-//preload images
 var questionImgs = new Array(5);
 var answerImgs = new Array(5);
-var allImages = false;
 
 for (var i = 0; i < 5; i++) {
 	questionImgs[i] = new Image();
@@ -29,40 +11,12 @@ for (var i = 0; i < 5; i++) {
 
 };
 
-var questions = [];
-var answers = [];
-preloadImages(questionImgs, questions, questionsLoaded);
-preloadImages(answerImgs, answers, answersLoaded);
-
-
-function questionsLoaded() {
-	console.log("questions loaded");
-	console.log(questionImgs);
-	allImages = true;
-}
-
-function answersLoaded() {
-	console.log("answers loaded");
-}
-
 app.directive('quiz', function(quizFactory) {
-	if (allImages) {
-				console.log("hurrah");
-	}
-			console.log(allImages);
 	return {
 		restrict: 'AE',
 		scope: {},
 		templateUrl: 'template.html',
 		link: function(scope, elem, attrs) {
-
-			
-
-			scope.$watch(allImages, function() {
-			    console.log("true now!");
-			    console.log(allImages);
-			});
-
 			scope.start = function() {
 				console.log("start");
 				scope.id = 0;
@@ -102,6 +56,7 @@ app.directive('quiz', function(quizFactory) {
 					//scope.answerMode = true;
 				} else {
 					scope.quizOver = true;
+					scope.bgClass = "null";
 				}
 			};
 

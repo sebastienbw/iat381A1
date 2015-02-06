@@ -14,7 +14,6 @@
 							</div>
 						</div>
 						<div class="col-xs-4">
-							<!-- <h1>Cat App</h1> -->
 							<img class="catlogo" src="img/catapplogo.png">
 						</div>
 						<div class="col-xs-4 header-pad">
@@ -52,7 +51,7 @@
 				</div>
 			</div>
 
-			<div class ="row">
+			<div class ="row-fluid">
 				<div id="options">
 					<div class ="row-fluid">
 						<div class="col-sm-6">
@@ -81,30 +80,24 @@
 				</div>
 			</div>
 
-			<div class ="row">
+			<div class ="row-fluid">
 				<div class="xs-col-12">
 					<div class="{{nextQuestion}}" "cmn-t-underline" ng-click="swapQuestion()">
 						<h2 class="cmn-t-underline">Next Question</h2>
 					</div>
 				</div>
-				<!-- <div class="col-xs-3 footer">
-				</div>
-				<div class="col-xs-6 footer" "cmn-t-underline">
-					<div class="{{nextQuestion}}" "cmn-t-underline" ng-click="swapQuestion()">
-						<h2 class="cmn-t-underline">Next Question</h2>
-					</div>
-				</div>
-				<div class="col-xs-3 footer">
-				</div> -->
 			</div>
 		</div>
 
-		<div ng-show="quizOver">
-			<h2>Quiz is over</h2>
+		<divc class="score-screen" ng-show="quizOver">
+			<h2>Quiz Complete!</h2>
 			<div id="score">
-				Score: {{score}}
+				Score: {{score}}/5
 			</div>
-			<button ng-click="reset()">Play again</button>
+			<div id="startQuiz" ng-click="reset()">
+				<h3>Play Again?</h3>
+			</div>
+
 		</div>
 
 

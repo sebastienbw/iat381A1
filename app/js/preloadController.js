@@ -1,3 +1,6 @@
+//Preloader script adapted from:
+//http://www.bennadel.com/blog/2597-preloading-images-in-angularjs-with-promises.htm
+
 app.controller(
     "PreloadController",
     function( $scope, preloader ) {

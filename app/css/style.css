@@ -4,6 +4,7 @@
 .intro {
   height: auto;
   background-color: #707070;
+  text-align: center;
 }
 
 .main-menu-header {
@@ -35,10 +36,16 @@
   margin-top: 1em;
 }
 
+.score-screen {
+  background-color: #707070;
+  color: white;
+}
+
 #options {
   font-size: 1.25em;
   max-width: 480px;
   margin: 0 auto;
+  display: block;
 }
 
 #load-text {
@@ -211,6 +218,15 @@
 
 .restart-btn {
   
+}
+
+.score-screen h2 {
+  padding-top: 2em;
+  color: white;
+}
+
+#score {
+  padding: 1em 0 2em 0;
 }
 
 .catlogo{
