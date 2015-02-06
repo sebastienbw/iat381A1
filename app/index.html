@@ -14,29 +14,34 @@
 	</head>
 
 	<body ng-controller="PreloadController">
-		<div ng-switch="isLoading">
- 
-        <!-- BEGIN: Loading View. -->
-        <p ng-switch-when="true">
- 
-            Your images are being loaded... {{ percentLoaded }}%
- 
-        </p>
-        <!-- END: Loading View. -->
- 
-        <!-- BEGIN: Results View. -->
-        <div
-            ng-switch-when="false"
-            ng-switch="isSuccessful">
- 
-            <div ng-switch-when="true">
- 
-                <quiz/>
- 
-            </div>
-        </div>
-        <!-- END: Results View. -->
- 
-    </div>
+		<div class="main-menu-header">
+			<img src="img/catapplogomd.png">
+			<div ng-switch="isLoading">
+		        <!-- BEGIN: Loading View. -->
+		        <div ng-switch-when="true">
+		 			<div class="loader">
+						<div class="loader-left">
+						</div>
+						<div class="loader-right">
+						</div>
+					</div>
+					<h2>loading</h2>
+		        </div>
+		        <!-- END: Loading View. -->
+		 
+		        <!-- BEGIN: Results View. -->
+		        <div
+		            ng-switch-when="false"
+		            ng-switch="isSuccessful">
+		 
+		            <div ng-switch-when="true">
+		 
+		                <quiz/>
+		 
+		            </div>
+		        </div>
+		        <!-- END: Results View. -->
+		    </div>
+	    </div>
 	</body>
 </html>
