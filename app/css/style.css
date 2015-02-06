@@ -11,6 +11,7 @@
   background-color: #707070;
   text-align: center;
 }
+
 .main-menu {
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
@@ -89,22 +90,24 @@
 }
 
 .nextQuestionVisible {
+  margin-top: 1em;
   visibility: visible;
   font-size: 2em;
   font-weight: bold;
   /*background-color: yellow;*/
-  border-radius:0.5em;
+  /*border-radius:0.5em;*/
   display: block;
   color: white;
- /* min-height: 2em;*/
-  padding-bottom: 0.15em;
+  /*width: auto;*/
+  padding: 0.5em;
+  height:3em;
   background-color: rgba(0,0,0,0.6);
   -webkit-transition: height 0.6s;
   transition: height 0.6s;
 }
 
 .nextQuestionVisible:hover {
-  color:white;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .nextQuestionHidden {
@@ -279,6 +282,7 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
+  background-color: #707070;
 }
 
 h1 {
@@ -289,7 +293,9 @@ h1 {
 }
 
 h2 {
+  margin-top: 0.3em;
   font-weight: bold;
+  color: rgb(40,40,40);
 }
 
 h3 {
